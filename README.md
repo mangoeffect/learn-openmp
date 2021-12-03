@@ -1,0 +1,2 @@
+# learn-openmp
+openmp examples
