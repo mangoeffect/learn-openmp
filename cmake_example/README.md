@@ -47,3 +47,19 @@ int main(int argc, char** argv)
 }>
 ```
 
+执行上面程序可能的结果:
+
+```
+lean openmp: cmake import openmp example.
+i = i = i = i = i = i = i = i = 1639
+
+5
+
+2
+i = 7
+0
+8
+
+i = 4
+```
+可看到，for循环是并行执行输出的结果。
