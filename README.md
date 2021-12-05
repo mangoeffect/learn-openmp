@@ -11,3 +11,6 @@ openmp examples
 
 - master
 
+- reduction
+
+[https://mangoroom.cn/parallel-programming/learn-openmp-reduction.html](https://mangoroom.cn/parallel-programming/learn-openmp-reduction.html)
