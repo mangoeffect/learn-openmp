@@ -6,6 +6,11 @@ struct MyClass
 {
     int data;
     MyClass(const int& data_): data(data_){}
+    MyClass& operator = (const MyClass& other)
+    { 
+        
+        return *this;
+    }
     MyClass& operator += (const MyClass& other)
     {
         data += other.data;
@@ -23,6 +28,7 @@ struct MyClass
 
 #pragma omp declare reduction(MyAdd_with100: MyClass: omp_out += omp_in) initializer(omp_priv=MyClass(100)) 
 
+#pragma omp declare reduction(MyMerge: std::vector<MyClass>: omp_out.insert(omp_out.end(), omp_in.begin(), omp_in.end()))
 
 int main(int argc, char** argv)
 {
@@ -45,5 +51,16 @@ int main(int argc, char** argv)
     }
 
     std::cout << "custom reduction with 100  initializer sum = " <<sum.data << std::endl;
+
+    std::vector<MyClass> merge;
+    std::vector<std::vector<MyClass>> list(100, std::vector<MyClass>(5, 1));
+
+#pragma omp parallel for reduction(MyMerge: merge)
+    for(int i = 0; i < list.size(); ++i)
+    {
+        merge.insert(merge.end(), list[i].begin(), list[i].end());
+    }
+
+    std::cout << "merge size = "<< merge.size() << std::endl;
     return 0;
 }
