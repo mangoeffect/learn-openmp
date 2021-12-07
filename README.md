@@ -14,3 +14,7 @@ openmp examples
 - reduction
 
 [https://mangoroom.cn/parallel-programming/learn-openmp-reduction.html](https://mangoroom.cn/parallel-programming/learn-openmp-reduction.html)
+
+- custom-reduction
+
+[https://mangoroom.cn/parallel-programming/learn-openmp-custom-reduction.html](https://mangoroom.cn/parallel-programming/learn-openmp-custom-reduction.html)
