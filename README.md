@@ -21,4 +21,4 @@ openmp examples
 
 - use-newversion-openmp-on-windows
 
-[https://mangoroom.cn/parallel-programming/learn-openmp-use-newversion-openmp-on-windows.html(https://mangoroom.cn/parallel-programming/learn-openmp-use-newversion-openmp-on-windows.html)
+[https://mangoroom.cn/parallel-programming/learn-openmp-use-newversion-openmp-on-windows.html](https://mangoroom.cn/parallel-programming/learn-openmp-use-newversion-openmp-on-windows.html)
