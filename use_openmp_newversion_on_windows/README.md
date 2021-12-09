@@ -11,7 +11,7 @@
 
 打开VS，到安装界面搜索找到扩展安装。步骤路径是工具-获取工具和功能-单个组件，搜索clang，如下图，勾选安装以下llvm-clang扩展。
 
-![install-clang-extension](https://mango-blog-1255355814.cos.ap-guangzhou.myqcloud.com/mango-boginstall-clang-extension.png)
+![install-clang-extension](./images/install-clang-extension.png)
 
 安装完成重启VS,至此VS已经支持使用llvm-clang的工具链编译项目。
 
@@ -39,7 +39,7 @@ cmake -G "Visual Studio 16 2019" ..
 
 打开在build生成的VS解决方案，一般是这样子的：
 
-![openmp2.0-vs-project](https://mango-blog-1255355814.cos.ap-guangzhou.myqcloud.com/mango-bogopenmp-visual-studio-default-solution.png)
+![openmp2.0-vs-project](./images/openmp-visual-studio-default-solution.png)
 
 可以看到，VS还是仅支持的老旧的OpenMP2.0版本。使用该解决方案工程编译上一篇文章[【学习openmp-自定义reduction】](https://mangoroom.cn/parallel-programming/learn-openmp-custom-reduction.html)的reduction程序时会报错：
 
@@ -92,7 +92,7 @@ cmake -G "Visual Studio 16 2019" -T ClangCL ..
 ```
 与默认的构建命令相比多了```-T ClangCL```命令,这个命令对应的是cmake-gui构建时的Option toolset参数设置：
 
-![cmake-gui-setting-parameter-T](https://mango-blog-1255355814.cos.ap-guangzhou.myqcloud.com/mango-bogcmake-gui-clangcl-parameter.png)
+![cmake-gui-setting-parameter-T](./images/cmake-gui-clangcl-parameter.png)
 
 构建生成过程如下：
 
@@ -108,7 +108,7 @@ cmake -G "Visual Studio 16 2019" -T ClangCL ..
 
 可以看到find_package并未找到openmp,构建流程执行的是else分支。构建生成后，打开解决方案,
 
-![visual-studio-studio-llvm-clang-solution](https://mango-blog-1255355814.cos.ap-guangzhou.myqcloud.com/mango-bogopenmp-visual-studio-llvm-clang-solution.png)
+![visual-studio-studio-llvm-clang-solution](./images/openmp-visual-studio-llvm-clang-solution.png)
 
 可以看到，解决方案与默认的方案有如下的区别：
 
