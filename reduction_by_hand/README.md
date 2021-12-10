@@ -1,4 +1,5 @@
 
+## 起因
 在上两篇文章
 
 - [【学习openmp-reduction】](https://mangoroom.cn/parallel-programming/learn-openmp-reduction.html)
