@@ -22,7 +22,7 @@ else()
     add_executable(without_openmp main.cpp)
 endif()
 ```
-基于以上的CMakeLists.txt，分别执行以下的构建命令可生成开启OpenMP优化和不包含OpenMP优化的项目：
+基于以上CMakeLists.txt，分别执行以下的构建命令可生成开启OpenMP优化和不包含OpenMP优化的项目：
 
 ```bash
 cmake .. #默认开启OpenMP优化
