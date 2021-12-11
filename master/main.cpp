@@ -25,9 +25,10 @@ int main(int argc, char** argv)
 #pragma omp master
 	{
 	    v = master_v;
-	    std::cout << "master thread" << std::endl;
+		#pragma omp critical
+	    std::cout << "master thread, v = "<< v << std::endl;
 	}
-#pragma omp automic
+#pragma omp critical
 	std::cout << "v = "<< v  << std::endl;
     } 
     return 0;
